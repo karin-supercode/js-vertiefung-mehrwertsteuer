@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projekt Trinkgeldrechner</title>
+    <link rel="stylesheet" href="assets/scss/main.css" />
+  </head>
+
+  <body>
+    <section>
+      <form action="" onsubmit="return false" id="formular">
+        <h2>Was soll berechnet werden?</h2>
+
+        <div>
+          <input type="radio" name="was" id="nettozubrutto" value="nettozubrutto" checked />
+          <label for="nettozubrutto">Mehrwertsteuer aufschlagen (Netto zu Brutto)</label>
+        </div>
+
+        <div>
+          <input type="radio" name="was" id="bruttozunetto" value="bruttozunetto" />
+          <label for="bruttozunetto">Mehrwertsteuer abziehen (Brutto zu Netto)</label>
+        </div>
+        <br />
+        <hr />
+        <br />
+
+        <h2>Mehrwertsteuersatz</h2>
+
+        <div>
+          <input type="radio" name="satz" id="neunzehn" value="neunzehn" checked />
+          <label for="satz">19%</label>
+        </div>
+
+        <div>
+          <input type="radio" name="satz" id="sieben" value="sieben" />
+          <label for="satz">7%</label>
+        </div>
+        <br />
+        <hr />
+        <br />
+
+        <label for="betrag">Nettobetrag in EUR</label>
+        <input type="number" name="betrag" id="betrag" step=".01" min=”0″ value="10.00" required/>
+        <br />
+
+        <input type="submit" value="Abschicken" onclick="berechnen()" />
+
+        <h2>Das Ergebnis</h2>
+
+        <div id="ausgabe1"></div>
+      </form>
+    </section>
+
+    <script src="https://kit.fontawesome.com/414a930ca8.js" crossorigin="anonymous"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
